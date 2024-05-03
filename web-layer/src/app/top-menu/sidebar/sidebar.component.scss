@@ -1,0 +1,29 @@
+.offcanvas {
+    width: 60%;
+}
+.category-container{
+    margin-top: 12vh;
+    margin-left: 8vh;
+    display: block;
+    align-items: center;
+
+}
+.btn{
+    position: relative;
+    width: 80%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+}
+.btn:hover{
+    background-color: gray;
+    transition: color 0.5 ease;
+}
+
+span{
+    font-size: 32px;
+    font-weight: 600px;
+    line-height: 3.25rem;
+    align-items: center;
+}
