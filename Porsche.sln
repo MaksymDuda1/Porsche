@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Porsche.API", "Porsche.API\Porsche.API.csproj", "{C153ED01-BF38-40B6-AE4E-D7219835883B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Porsche.Application", "Porsche.Application\Porsche.Application.csproj", "{53B0688E-D687-4D40-B769-E1C217883EAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Porsche.Domain", "Porsche.Domain\Porsche.Domain.csproj", "{5039FC7C-C839-48ED-B430-EF90790EA4A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Porsche.Infrastructure", "Porsche.Infrastructure\Porsche.Infrastructure.csproj", "{717080C7-C028-40AD-9074-576DD8A6C838}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C153ED01-BF38-40B6-AE4E-D7219835883B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C153ED01-BF38-40B6-AE4E-D7219835883B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C153ED01-BF38-40B6-AE4E-D7219835883B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C153ED01-BF38-40B6-AE4E-D7219835883B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53B0688E-D687-4D40-B769-E1C217883EAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53B0688E-D687-4D40-B769-E1C217883EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53B0688E-D687-4D40-B769-E1C217883EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53B0688E-D687-4D40-B769-E1C217883EAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5039FC7C-C839-48ED-B430-EF90790EA4A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5039FC7C-C839-48ED-B430-EF90790EA4A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5039FC7C-C839-48ED-B430-EF90790EA4A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5039FC7C-C839-48ED-B430-EF90790EA4A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{717080C7-C028-40AD-9074-576DD8A6C838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717080C7-C028-40AD-9074-576DD8A6C838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717080C7-C028-40AD-9074-576DD8A6C838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{717080C7-C028-40AD-9074-576DD8A6C838}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
