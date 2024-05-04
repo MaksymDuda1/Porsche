@@ -150,9 +150,6 @@ namespace Porsche.Infrastructure.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
-                    b.Property<bool>("IsAvailable")
-                        .HasColumnType("boolean");
-
                     b.Property<string>("Model")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -163,6 +160,9 @@ namespace Porsche.Infrastructure.Migrations
 
                     b.Property<float>("Price")
                         .HasColumnType("real");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
 
                     b.Property<int>("YearOfEdition")
                         .HasColumnType("integer");
@@ -249,13 +249,13 @@ namespace Porsche.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("3a04131f-7e73-4318-8a54-b8c087f3e973"),
+                            Id = new Guid("2e4dca7a-9963-4da2-91ca-6aa946fb4fd0"),
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = new Guid("6c0fb75b-119c-409d-9e00-5b23bcef8010"),
+                            Id = new Guid("eae77cb5-15b5-4951-8beb-22b65acbbb94"),
                             Name = "User",
                             NormalizedName = "USER"
                         });

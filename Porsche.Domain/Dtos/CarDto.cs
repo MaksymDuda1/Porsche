@@ -28,9 +28,7 @@ public class CarDto
     
     public float Price { get; set; }
     
-    public string Description { get; set; } = null!;
-    
-    public bool IsAvailable { get; set; }
+    public Status Status { get; set; }
    
     public Guid? PorscheCenterId  { get; set; }
     

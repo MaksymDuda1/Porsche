@@ -13,10 +13,7 @@ public class CarService(IUnitOfWork unitOfWork, IMapper mapper, IFileService fil
     {
         var cars = await unitOfWork.Cars.GetAllAsync(
             c => c.Photos);
-
-        if (cars == null)
-            throw new Exception("No available cars found");
-
+        
         return cars.Select(mapper.Map<CarDto>).ToList();
     }
 
@@ -63,7 +60,7 @@ public class CarService(IUnitOfWork unitOfWork, IMapper mapper, IFileService fil
         car.Engine = updateCarDto.Engine;
         car.FuelConsumption = updateCarDto.FuelConsumption;
         car.Price = updateCarDto.Price;
-        car.IsAvailable = updateCarDto.IsAvailable;
+        car.Status = updateCarDto.Status;
 
         var porscheCenter = mapper.Map<PorscheCenterDto>(await unitOfWork.Centers
             .GetSingleByConditionAsync(c => c.Id == updateCarDto.PorscheCenterId));

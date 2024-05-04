@@ -13,3 +13,4 @@
 /home/maksi/Studying/Porsche/Porsche.Application/bin/Debug/net8.0/Porsche.Domain.dll
 /home/maksi/Studying/Porsche/Porsche.Application/bin/Debug/net8.0/Porsche.Domain.pdb
 /home/maksi/Studying/Porsche/Porsche.Application/obj/Debug/net8.0/Porsche.Application.csproj.CopyComplete
+/home/maksi/Studying/Porsche/Porsche.Application/obj/Debug/net8.0/Porsche.Application.sourcelink.json

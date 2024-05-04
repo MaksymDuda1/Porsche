@@ -22,6 +22,8 @@ public class CreateCarDto
     public float FuelConsumption { get; set; }
     
     public float Price { get; set; }
+
+    public Status Status { get; set; }
     public Guid? PorscheCenterId  { get; set; }
     
     public List<IFormFile>? Photos { get; set; } = new List<IFormFile>();

@@ -9,7 +9,7 @@ namespace Porsche.Controllers;
 public class CarController(ICarService carService) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult<List<CarDto>>> GetAllCars()
+    public async Task<IActionResult> GetAllCars()
     {
         try
         {
@@ -22,7 +22,7 @@ public class CarController(ICarService carService) : ControllerBase
     }
 
     [HttpGet("{id:guid}")]
-    public async Task<ActionResult<CarDto>> GetCarById(Guid id)
+    public async Task<IActionResult> GetCarById(Guid id)
     {
         try
         {

@@ -127,3 +127,4 @@
 /home/maksi/Studying/Porsche/Porsche.API/obj/Debug/net8.0/Porsche.API.pdb
 /home/maksi/Studying/Porsche/Porsche.API/obj/Debug/net8.0/Porsche.API.genruntimeconfig.cache
 /home/maksi/Studying/Porsche/Porsche.API/obj/Debug/net8.0/ref/Porsche.API.dll
+/home/maksi/Studying/Porsche/Porsche.API/obj/Debug/net8.0/Porsche.API.sourcelink.json

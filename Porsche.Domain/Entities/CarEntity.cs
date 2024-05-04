@@ -27,7 +27,7 @@ public class CarEntity
     
     public float Price { get; set; }
     
-    public bool IsAvailable { get; set; } = true;
+    public Status Status { get; set; }
     
     [JsonIgnore] 
     public Guid? PorscheCenterId  { get; set; }

@@ -10,3 +10,4 @@
 /home/maksi/Studying/Porsche/Porsche.Domain/obj/Debug/net8.0/refint/Porsche.Domain.dll
 /home/maksi/Studying/Porsche/Porsche.Domain/obj/Debug/net8.0/Porsche.Domain.pdb
 /home/maksi/Studying/Porsche/Porsche.Domain/obj/Debug/net8.0/ref/Porsche.Domain.dll
+/home/maksi/Studying/Porsche/Porsche.Domain/obj/Debug/net8.0/Porsche.Domain.sourcelink.json

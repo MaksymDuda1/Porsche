@@ -1,0 +1,56 @@
+<div class="car-container">
+    <div class="image-wrapper">
+        <div class="row d-flex">
+            <div class="main-img">
+                <img *ngIf="car.photos" src="../../../assets/images/carImages/{{car.photos[0]}}" class="img-fluid"
+                    alt="">
+            </div>
+            <div class="main-part">
+                <div class="car-info">
+                    <div class="car-name">
+                        {{car.model}}
+                    </div>
+                    <div class="desc">
+                        <div class="color">
+                            Red
+                        </div>
+                        <div class="engine">
+                            {{car.engine}}
+                        </div>
+                        <div class="year">
+                            {{car.yearOfEdition}}
+                        </div>
+                        <div class="mileage">
+                            20022
+                        </div>
+                        <div class="center">
+
+                        </div>
+                    </div>
+
+                    <div class="price">
+
+                    </div>
+
+                    <div class="buy-btn">
+                        <button class="btn btn-dark">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="secondary-images d-flex justify-content-around mt-3">
+            <div class="secondary-images">
+                <img *ngIf="car.photos" src="../../../assets/images/carImages/{{car.photos[2].fileName}}"
+                    class="rounded" alt="...">
+            </div>
+            <div class="secondary-images">
+                <img *ngIf="car.photos" src="../../../assets/images/carImages/{{car.photos[3].fileName}}"
+                    class="rounded" alt="...">
+            </div>
+            <div class="secondary-images">
+                <img *ngIf="car.photos" src="../../../assets/images/carImages/{{car.photos[4].fileName}}"
+                    class="rounded" alt="...">
+            </div>
+        </div>
+    </div>
+</div>
