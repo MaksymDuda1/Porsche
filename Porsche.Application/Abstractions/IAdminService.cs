@@ -1,6 +1,8 @@
+using Porsche.Domain.Dtos;
+
 namespace Porsche.Application.Abstractions;
 
 public interface IAdminService
 {
-    Task ChangeUserRole(Guid id);
+    Task ChangeUserRole(ChangeRoleDto changeRoleDto);
 }

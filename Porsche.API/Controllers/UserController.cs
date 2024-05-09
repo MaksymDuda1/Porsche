@@ -76,5 +76,20 @@ public class UserController(IUserService userService) : ControllerBase
             return BadRequest(e.Message);
         }
     }
+    
+    [HttpPost]
+    public async Task<IActionResult> Order(OrderDto request)
+    {
 
+        try
+        {
+            await userService.Order(request);
+            return Ok();
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+    
 }

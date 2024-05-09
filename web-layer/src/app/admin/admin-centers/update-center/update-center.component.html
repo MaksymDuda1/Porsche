@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="container-md ">
+        <div class="header">
+            <span>Update page</span>
+        </div>
+        <form>
+            <div class="mb-3">
+                <label for="Name" class="form-label">Name:</label>
+                <input type="text" name="name" class="form-control area" [(ngModel)]="porscheCenterUpdateModel.name" id="name">
+            </div>
+            <div class="mb-3">
+                <label for="Name" class="form-label">Address</label>
+                <input type="text" name="path" class="form-control area" [(ngModel)]="porscheCenterUpdateModel.address" id="path">
+            </div>
+            
+            <div class="mb-3">
+                <label for="Name" class="form-label">Image:</label>
+                <input type="file" name="image" class="form-control area" (change)="onFileChange($event)" id="image">
+            </div>
+           
+            {{message}}
+            <div class="btns">
+                <button type="submit" name="stage7" class="btn btn-dark" (click)="onUpdate()">Submit</button>
+                <button class="btn btn-dark" [routerLink]="['/admin-centers']">Back</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -9,7 +9,7 @@ namespace Porsche.Controllers;
 public class PorscheCenterController(IPorscheCenterService porscheCenterService) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult<List<PorscheCenterDto>>> GetAllCenters()
+    public async Task<ActionResult> GetAllCenters()
     {
         try
         {

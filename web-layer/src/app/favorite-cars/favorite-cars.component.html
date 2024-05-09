@@ -1,0 +1,37 @@
+<div class="container-lg d-flex flex-wrap justify-content-center mt-4">
+    <div class="car" [routerLink]="'/car-detail/' + car.id" *ngFor="let car of cars">
+        <div class="img-wrapper">
+            <img *ngIf="car.photos" [src]="car.photos[0].fileName" alt="Car image">
+        </div>
+        <div class="car-idenitty">
+            <span>Identity:</span>
+            {{car.identityCode}}
+        </div>
+        <div class="car-model">
+            <span>Model:</span>
+            {{car.model}}
+        </div>
+        <div class="car-color">
+            <span>Color:</span>
+            {{car.color}}
+        </div>
+        <div class="car-type">
+            <span>Body type:</span>
+            {{car.bodyType}}
+        </div>
+        <div class="car-engine">
+            <span>Engine:</span>
+            {{car.engine}}
+        </div>
+        <div class="car-center">
+            <span>Porsche center</span>
+            {{car.porscheCenterId}}
+
+        </div>
+        <div class="car-price">
+            <span>Price</span>
+                {{car.price}}
+        </div>
+    </div>
+    <div class="col-12">{{errorMessage}}</div>
+</div>

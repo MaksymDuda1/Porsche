@@ -13,11 +13,13 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AuthService } from '../services/authService';
 import { TopMenuComponent } from './top-menu/top-menu.component';
+import { adminRoutes } from './admin/admin.router';
 
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
+    provideRouter(adminRoutes),
     provideClientHydration(),
     provideHttpClient(withFetch()),
     importProvidersFrom([

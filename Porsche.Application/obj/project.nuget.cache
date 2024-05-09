@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ggdqzdH9b14K4bddUNw+b8qp3Kl2g4xmBVgXUuDALZteHlUiuvBNkTlNBS2f+ajFMlgNVOpjTiaCh7cXyDWsIg==",
+  "dgSpecHash": "yj68ofM5BHv5clHRWldVbHA3Y2YRZ5L5nzUKm7sIn14oamR4h0BWxQCWegS/743LZ6w+zexiDZ6/5nsV25XkYQ==",
   "success": true,
   "projectFilePath": "/home/maksi/Studying/Porsche/Porsche.Application/Porsche.Application.csproj",
   "expectedPackageFiles": [
     "/home/maksi/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
+    "/home/maksi/.nuget/packages/bouncycastle.cryptography/2.3.0/bouncycastle.cryptography.2.3.0.nupkg.sha512",
+    "/home/maksi/.nuget/packages/mailkit/4.5.0/mailkit.4.5.0.nupkg.sha512",
     "/home/maksi/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.4/microsoft.aspnetcore.authentication.jwtbearer.8.0.4.nupkg.sha512",
     "/home/maksi/.nuget/packages/microsoft.aspnetcore.cryptography.internal/8.0.4/microsoft.aspnetcore.cryptography.internal.8.0.4.nupkg.sha512",
     "/home/maksi/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/8.0.4/microsoft.aspnetcore.cryptography.keyderivation.8.0.4.nupkg.sha512",
@@ -26,7 +28,10 @@
     "/home/maksi/.nuget/packages/microsoft.identitymodel.protocols/7.1.2/microsoft.identitymodel.protocols.7.1.2.nupkg.sha512",
     "/home/maksi/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/7.1.2/microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
     "/home/maksi/.nuget/packages/microsoft.identitymodel.tokens/7.1.2/microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
-    "/home/maksi/.nuget/packages/system.identitymodel.tokens.jwt/7.1.2/system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512"
+    "/home/maksi/.nuget/packages/mimekit/4.5.0/mimekit.4.5.0.nupkg.sha512",
+    "/home/maksi/.nuget/packages/system.formats.asn1/8.0.0/system.formats.asn1.8.0.0.nupkg.sha512",
+    "/home/maksi/.nuget/packages/system.identitymodel.tokens.jwt/7.1.2/system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512",
+    "/home/maksi/.nuget/packages/system.security.cryptography.pkcs/8.0.0/system.security.cryptography.pkcs.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

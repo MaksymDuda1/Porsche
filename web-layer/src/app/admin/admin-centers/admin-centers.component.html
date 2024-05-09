@@ -1,0 +1,28 @@
+<div class="centers">
+    <span>Porsche Centers:</span>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Img</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col"><button class="btn btn-dark" [routerLink]="'create-center/'">Add</button></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let center of centers">
+                    <td><div *ngIf="center.photoPath != null" class="img-wrapper"><img [src]="sanitizeImg(center.photoPath)" alt="centerImg"></div></td>
+                    <td>{{center.name}}</td>
+                    <td>{{center.address}}</td>
+                    <td><button class="btn btn-warning" [routerLink]="'update-center/' + center.id">Edit</button></td>
+                    <td><button class="btn btn-danger" (click)="delete(center.id)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-dark" [routerLink]="'/admin'">Back</button>
+
+    </div>
+</div>
+

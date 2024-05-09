@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Porsche.Application.Abstractions;
+using Porsche.Domain.Dtos;
 
 namespace Porsche.Controllers;
 
@@ -7,12 +8,12 @@ namespace Porsche.Controllers;
 [Route("api/admin")]
 public class AdminController(IAdminService adminService) : ControllerBase
 {
-    [HttpPut("{id:guid}")]
-    public async Task<IActionResult> ChangeUserRole(Guid id)
+    [HttpPut]
+    public async Task<IActionResult> ChangeUserRole([FromBody] ChangeRoleDto request)
     {
         try
         {
-            await adminService.ChangeUserRole(id);
+            await adminService.ChangeUserRole(request);
 
             return Ok();
         }

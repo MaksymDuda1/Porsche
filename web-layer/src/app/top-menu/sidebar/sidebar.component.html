@@ -1,24 +1,27 @@
-<div class="offcanvas offcanvas-start d-flex" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-    aria-labelledby="offcanvasWithBothOptionsLabel">
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
     <div class="d-flex">
         <div class="offcanvas-body">
             <div class="category-container">
-                <div class="category-title">
-                    <button class="btn"><span>Models</span> <span>></span></button>
+                <div *ngIf="isAdmin" class="category-title">
+                    <button [routerLink]="'/admin'" class="btn" data-bs-dismiss="offcanvas">Admin page <span>&gt;</span></button>
                 </div>
                 <div class="category-title">
-                    <button class="btn">Models<span></span> <span>></span></button>
+                    <button [routerLink]="'/available-cars'" class="btn" data-bs-dismiss="offcanvas">Models <span>&gt;</span></button>
                 </div>
                 <div class="category-title">
-                    <button class="btn">Models<span></span> <span>></span></button>
+                    <button [routerLink]="'/available-cars'" class="btn" data-bs-dismiss="offcanvas">Available cars <span>&gt;</span></button>
+                </div>
+                <div *ngIf="isAuthorized" class="category-title">
+                    <button [routerLink]="'/favorite-cars'" class="btn" data-bs-dismiss="offcanvas">Saved cars<span>&gt;</span></button>
+                </div>
+                
+                <div class="category-title">
+                    <button [routerLink]="'/about-us'" class="btn" data-bs-dismiss="offcanvas">About us<span>&gt;</span></button>
                 </div>
                 <div class="category-title">
-                    <button class="btn">Models<span></span> <span>></span></button>
+                    <button [routerLink]="'/career'" class="btn" data-bs-dismiss="offcanvas">Career<span>&gt;</span></button>
                 </div>
             </div>
-        </div>
-        <div class="offcanvas-body">
-            <p>asdasdasdasd</p>
         </div>
     </div>
 </div>

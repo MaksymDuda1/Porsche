@@ -8,7 +8,7 @@ public class SearchByParametersDto
     
     public BodyType[]? BodyType { get; set; }
     
-    public Color[]? Colors { get; set; }
+    public Color[]? Color { get; set; }
     
     public int? MinYearOfRelease { get; set; }
     

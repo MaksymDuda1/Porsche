@@ -29,9 +29,8 @@ public class CarDto
     public float Price { get; set; }
     
     public Status Status { get; set; }
-   
     public Guid? PorscheCenterId  { get; set; }
-    
+    [JsonIgnore] 
     public PorscheCenterDto? PorscheCenter { get; set; }
     
     public List<PhotoDto>? Photos { get; set; } = new List<PhotoDto>();

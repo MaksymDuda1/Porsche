@@ -1,64 +1,60 @@
 .car-container {
-    border-radius: 20px;
-    border-style: none;
-    height: 640px;
-    width: 1200px;
-    margin-bottom: 2em;
-    background-color: gainsboro;
+  border-radius: 20px;
+  border-style: none;
+  height: 640px;
+  width: 1200px;
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
 }
 
-.main-img {
-    height: 400px;
+.row {
+  display: flex;
+  flex: 1; /* Додано */
+  max-height: 440px;
 }
 
-.image-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.col {
+  flex: 1; /* Додано */
 }
 
-.secondary-images {
-    display: flex;
-}
-
-.main-part {
-    flex: 1;
-    display: flex;
-    padding: 2em;
-    border-style: none;
-    background: none;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.rounded {
-    width: 100%;
-    height: 100%;
-    margin: 0 5px;
-    object-fit: cover;
-
+.img-wrapper {
+  flex: 1; /* Додано */
+  height: 100%;
 }
 
 img {
-    height: 100%;
-    object-fit: cover;
-    border-radius: 4% 0 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4% 0 0 0;}
+
+.secondary-img {
+  flex: 1; /* Додано */
+  height: 220px;
+  img{
+    border-radius: 0 0 4% 4% ;
+  }
 }
 
-.main-img {
-    flex: 1;
+.secondary-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .car-info {
-    padding-bottom: 16px;
-    font-size: 32px;
-    font-weight: 600;
+  padding-bottom: 16px;
+  font-size: 32px;
+  font-weight: 600;
 }
 
-.buy-btn{
-    padding-top: 24px;
+.buy-btn {
+  padding-top: 24px;
 }
-.btn{
-    font-size: 24px;
-    font-weight: 600;
+
+.btn {
+  font-size: 24px;
+  font-weight: 600;
 }

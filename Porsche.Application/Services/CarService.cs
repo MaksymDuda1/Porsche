@@ -12,8 +12,10 @@ public class CarService(IUnitOfWork unitOfWork, IMapper mapper, IFileService fil
     public async Task<List<CarDto>> GetAllCars()
     {
         var cars = await unitOfWork.Cars.GetAllAsync(
-            c => c.Photos);
-        
+            c => c.PorscheCenter,
+            c => c.Photos,
+            c => c.Users);
+            
         return cars.Select(mapper.Map<CarDto>).ToList();
     }
 
@@ -21,7 +23,8 @@ public class CarService(IUnitOfWork unitOfWork, IMapper mapper, IFileService fil
     {
         var car = await unitOfWork.Cars.GetSingleByConditionAsync(
             c => c.Id == id,
-            c => c.Photos);
+            c => c.Photos,
+            c => c.PorscheCenter);
 
         if (car == null)
             throw new Exception("Car doesn't found");
@@ -31,22 +34,41 @@ public class CarService(IUnitOfWork unitOfWork, IMapper mapper, IFileService fil
 
     public async Task CreateCar(CreateCarDto createCarDto)
     {
-        var car = mapper.Map<CarDto>(createCarDto);
+        var carDto = new CarDto()
+        {
+            IdentityCode = createCarDto.IdentityCode,
+            Model = createCarDto.Model,
+            BodyType = createCarDto.BodyType,
+            Color = createCarDto.Color,
+            FuelConsumption = createCarDto.FuelConsumption,
+            YearOfEdition = createCarDto.YearOfEdition,
+            Engine = createCarDto.Engine,
+            Price = createCarDto.Price
+        };
 
-        var porscheCenter =
-            await unitOfWork.Centers.GetSingleByConditionAsync(
-                c => c.Id == createCarDto.PorscheCenterId);
-        
-        if(porscheCenter != null)
-            car.PorscheCenter = mapper.Map<PorscheCenterDto>(porscheCenter);
-        
-        if(createCarDto.Photos != null)
+        var porscheCenter = await unitOfWork.Centers
+            .GetSingleByConditionAsync(c => c.Id == createCarDto.PorscheCenterId);
+
+        if (porscheCenter == null)
+            throw new Exception($"Porsche Center with ID {createCarDto.PorscheCenterId} not found.");
+
+        carDto.PorscheCenterId = porscheCenter.Id;
+
+        var carEntity = mapper.Map<CarEntity>(carDto);
+
+        if (createCarDto.Photos != null)
+        {
             foreach (var photo in createCarDto.Photos)
-                car.Photos.Add(mapper.Map<PhotoDto>(await fileService.UploadImage(photo)));
+            {
+                var photoDto = await fileService.UploadImage(photo);
+                carEntity.Photos.Add(mapper.Map<PhotoEntity>(photoDto));
+            }
+        }        
 
-        await unitOfWork.Cars.InsertAsync(mapper.Map<CarEntity>(car));
+        await unitOfWork.Cars.InsertAsync(carEntity);
         await unitOfWork.SaveAsync();
     }
+
 
     public async Task UpdateCar(UpdateCarDto updateCarDto)
     {

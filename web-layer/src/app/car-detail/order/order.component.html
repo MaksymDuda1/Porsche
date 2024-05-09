@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="price p-4">
+        {{car.price}}$
+    </div>
+    <div class="btns">
+        <div class="btn">
+            <button *ngIf="userId != null" class="btn btn-dark" (click)="onAdd()">{{isInFavorite ? "Remove from favorite" : "Add to Favorite"}}</button>
+        </div>
+        <div class="btn">
+            <button *ngIf="userId != null" class="btn" (click)="onOrder()">Send order request</button>
+                </div>
+    </div>
+    <div class="center py-4">
+        <div class="center-name p-2">
+            {{porscheCenter.name}}
+        </div>
+        <div class="center-address p-2">
+            {{porscheCenter.address}}
+        </div>
+    </div>
+</div>
+
+<ng-template #modal let-modal>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        
+        <div class="modal-body">
+            We have sent a message to our manager and will contact you shortly
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
+        </div>
+      </div>
+    </div>
+  </ng-template>

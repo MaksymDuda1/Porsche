@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Reflection.PortableExecutable;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http;
 using Porsche.Domain.Enums;
@@ -25,6 +26,7 @@ public class CreateCarDto
 
     public Status Status { get; set; }
     public Guid? PorscheCenterId  { get; set; }
-    
+
+    public PorscheCenterDto? PorscheCenter { get; set; }
     public List<IFormFile>? Photos { get; set; } = new List<IFormFile>();
 }

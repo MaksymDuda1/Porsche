@@ -28,10 +28,11 @@ public class PorscheCenterService(IFileService fileService, IUnitOfWork unitOfWo
     {
         var center = mapper.Map<PorscheCenterDto>(createPorscheCenterDto);
 
-        var photo = await fileService.UploadImage(createPorscheCenterDto.Photo);
+        var photo = await fileService.UploadImage(createPorscheCenterDto.PhotoPath);
         center.PhotoPath = photo.FileName;
 
         await unitOfWork.Centers.InsertAsync(mapper.Map<PorscheCenterEntity>(center));
+        await unitOfWork.SaveAsync();
     }
 
     public async Task UpdateCenter(UpdatePorscheCenterDto updatePorscheCenterDto)
@@ -42,9 +43,9 @@ public class PorscheCenterService(IFileService fileService, IUnitOfWork unitOfWo
         center.Name = updatePorscheCenterDto.Name;
         center.Address = updatePorscheCenterDto.Address;
 
-        if (updatePorscheCenterDto.Photo != null)
+        if (updatePorscheCenterDto.PhotoPath != null)
         {
-            var photo = await fileService.UploadImage(updatePorscheCenterDto.Photo);
+            var photo = await fileService.UploadImage(updatePorscheCenterDto.PhotoPath);
             center.PhotoPath = photo.Path;
         }
 
@@ -55,5 +56,6 @@ public class PorscheCenterService(IFileService fileService, IUnitOfWork unitOfWo
     public async Task DeleteCenter(Guid id)
     {
         await unitOfWork.Centers.Delete(id);
+        await unitOfWork.SaveAsync();
     }
 }

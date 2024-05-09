@@ -1,12 +1,14 @@
 import { BodyType } from "../enums/BodyType";
+import { Color } from "../enums/Color";
 
-export class SeaarchByConditionalsModel{
-    model: string = '';
-    bodyType: BodyType = 0;
-    minYearOfRelease: number = 0;
-    maxYearOfRelease: number = 0;
-    engine: string = '';
-    minPrice: number = 0;
-    maxPrice: number = 0;
-    porscheCenter: string = '';
+export class SearchByConditionalsModel{
+    model: string | null = null;
+    bodyType: BodyType[] = [];
+    color: Color[] = [];
+    minYearOfRelease: number | null = null;
+    maxYearOfRelease: number | null = null;
+    engine: string[] = [];
+    minPrice: number | null = null;
+    maxPrice: number | null = null;
+    porscheCenter: string[] = [];
 }

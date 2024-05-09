@@ -11,22 +11,17 @@ public class MappingProfile : Profile
     {
         CreateMap<UserEntity, UserDto>().ReverseMap();
         CreateMap<UserCarEntity, UserCarDto>().ReverseMap();
-        
-        CreateMap<CarEntity, CarDto>().ReverseMap()
-            .ForMember(c => c.Photos,
-                opt => opt.Ignore())
-            .ForMember(c => c.PorscheCenterId,
-                opt => opt.Ignore())
-            .ForMember(c => c.PorscheCenter, 
-                opt => opt.Ignore());
-        
+
+        CreateMap<CarEntity, CarDto>().ReverseMap();
+
         CreateMap<CreateCarDto, CarDto>().ReverseMap()
-            .ForMember(c => c.Photos, 
+            .ForMember(c => c.Photos,
                 opt => opt.Ignore());
+           
 
         CreateMap<PorscheCenterDto, PorscheCenterEntity>().ReverseMap();
         CreateMap<CreatePorscheCenterDto, PorscheCenterDto>().ReverseMap()
-            .ForMember(c => c.Photo,
+            .ForMember(c => c.PhotoPath,
                 opt => opt.Ignore());
 
         CreateMap<PhotoDto, PhotoEntity>().ReverseMap();

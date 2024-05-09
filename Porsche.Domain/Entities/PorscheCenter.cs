@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace Porsche.Domain.Entities;
 
 public class PorscheCenterEntity
@@ -9,5 +11,6 @@ public class PorscheCenterEntity
     public string Address { get; set; } = null!;
     
     public string? PhotoPath { get; set; }
+    [JsonIgnore] 
     public List<CarEntity>? Cars { get; set; } = new List<CarEntity>();
 }

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "YlMytwoXKruzMKCpNA+2tGkN1nk56lUS5gjYqFqLg1LaYOKMo+2Y2he2DYA4GWRrNkuXTiC1PoT81U+lD7umOw==",
+  "dgSpecHash": "l1aIgEPFvDpiZoXXoIMRnij+ZMwdgxXQLKkbdHtAw0gsAf2dxtSn0VabEEE6m7XkZGzSuSYhtC35Ho0J9ftozA==",
   "success": true,
   "projectFilePath": "/home/maksi/Studying/Porsche/Porsche.Infrastructure/Porsche.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/home/maksi/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
+    "/home/maksi/.nuget/packages/bouncycastle.cryptography/2.3.0/bouncycastle.cryptography.2.3.0.nupkg.sha512",
+    "/home/maksi/.nuget/packages/mailkit/4.5.0/mailkit.4.5.0.nupkg.sha512",
     "/home/maksi/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.4/microsoft.aspnetcore.authentication.jwtbearer.8.0.4.nupkg.sha512",
     "/home/maksi/.nuget/packages/microsoft.aspnetcore.cryptography.internal/8.0.4/microsoft.aspnetcore.cryptography.internal.8.0.4.nupkg.sha512",
     "/home/maksi/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/8.0.4/microsoft.aspnetcore.cryptography.keyderivation.8.0.4.nupkg.sha512",
@@ -33,9 +35,12 @@
     "/home/maksi/.nuget/packages/microsoft.identitymodel.protocols/7.1.2/microsoft.identitymodel.protocols.7.1.2.nupkg.sha512",
     "/home/maksi/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/7.1.2/microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
     "/home/maksi/.nuget/packages/microsoft.identitymodel.tokens/7.1.2/microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
+    "/home/maksi/.nuget/packages/mimekit/4.5.0/mimekit.4.5.0.nupkg.sha512",
     "/home/maksi/.nuget/packages/npgsql/8.0.2/npgsql.8.0.2.nupkg.sha512",
     "/home/maksi/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.2/npgsql.entityframeworkcore.postgresql.8.0.2.nupkg.sha512",
-    "/home/maksi/.nuget/packages/system.identitymodel.tokens.jwt/7.1.2/system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512"
+    "/home/maksi/.nuget/packages/system.formats.asn1/8.0.0/system.formats.asn1.8.0.0.nupkg.sha512",
+    "/home/maksi/.nuget/packages/system.identitymodel.tokens.jwt/7.1.2/system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512",
+    "/home/maksi/.nuget/packages/system.security.cryptography.pkcs/8.0.0/system.security.cryptography.pkcs.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

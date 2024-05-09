@@ -35,7 +35,7 @@ public class CarController(ICarService carService) : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateCar([FromBody] CreateCarDto request)
+    public async Task<IActionResult> CreateCar([FromForm] CreateCarDto request)
     {
         try
         {

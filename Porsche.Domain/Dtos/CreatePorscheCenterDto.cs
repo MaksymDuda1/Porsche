@@ -7,6 +7,5 @@ public class CreatePorscheCenterDto
     public string Name { get; set; } = null!;
     
     public string Address { get; set; } = null!;
-    
-    public IFormFile? Photo { get; set; }
+    public IFormFile? PhotoPath { get; set; }
 }

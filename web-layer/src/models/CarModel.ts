@@ -14,6 +14,6 @@ export class CarModel{
     fuelConsumption: number = 0.0;
     price: number = 0.0;
     status: Status = 0;
-    porscheCenterId: number = 0;
+    porscheCenterId: string = '';
     photos: PhotoModel[] | null = [];
 }

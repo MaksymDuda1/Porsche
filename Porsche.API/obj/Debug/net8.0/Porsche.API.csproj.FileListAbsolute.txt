@@ -128,3 +128,6 @@
 /home/maksi/Studying/Porsche/Porsche.API/obj/Debug/net8.0/Porsche.API.genruntimeconfig.cache
 /home/maksi/Studying/Porsche/Porsche.API/obj/Debug/net8.0/ref/Porsche.API.dll
 /home/maksi/Studying/Porsche/Porsche.API/obj/Debug/net8.0/Porsche.API.sourcelink.json
+/home/maksi/Studying/Porsche/Porsche.API/bin/Debug/net8.0/BouncyCastle.Cryptography.dll
+/home/maksi/Studying/Porsche/Porsche.API/bin/Debug/net8.0/MailKit.dll
+/home/maksi/Studying/Porsche/Porsche.API/bin/Debug/net8.0/MimeKit.dll

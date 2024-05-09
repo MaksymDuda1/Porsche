@@ -1,29 +1,34 @@
 .offcanvas {
-    width: 60%;
+    width: 30%;
 }
-.category-container{
+
+.category-container {
     margin-top: 12vh;
-    margin-left: 8vh;
     display: block;
     align-items: center;
-
 }
-.btn{
+
+.btn {
     position: relative;
-    width: 80%;
+    width: 100%;
     height: 64px;
     display: flex;
     justify-content: space-between;
-    padding: 32px;
-}
-.btn:hover{
-    background-color: gray;
-    transition: color 0.5 ease;
+    align-items: center;
+    padding: 0 32px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: black;
 }
 
-span{
-    font-size: 32px;
-    font-weight: 600px;
-    line-height: 3.25rem;
-    align-items: center;
+.btn:hover {
+    background-color: gray;
+}
+
+span {
+    font-size: 20px;
 }

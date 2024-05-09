@@ -249,13 +249,13 @@ namespace Porsche.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("2e4dca7a-9963-4da2-91ca-6aa946fb4fd0"),
+                            Id = new Guid("7b0aefbc-78dc-4bc0-91fe-c139168edae0"),
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = new Guid("eae77cb5-15b5-4951-8beb-22b65acbbb94"),
+                            Id = new Guid("77dd6ee8-6d3b-4a13-a34f-570f254985c2"),
                             Name = "User",
                             NormalizedName = "USER"
                         });

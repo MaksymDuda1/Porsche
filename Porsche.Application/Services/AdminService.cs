@@ -1,14 +1,15 @@
 using Microsoft.AspNetCore.Identity;
 using Porsche.Application.Abstractions;
+using Porsche.Domain.Dtos;
 using Porsche.Domain.Entities;
 
 namespace Porsche.Application.Services;
 
 public class AdminService(UserManager<UserEntity> _userManager) : IAdminService
 {
-    public async Task ChangeUserRole(Guid id)
+    public async Task ChangeUserRole(ChangeRoleDto changeRoleDto)
     {
-        var user = await _userManager.FindByIdAsync(id.ToString());
+        var user = await _userManager.FindByIdAsync(changeRoleDto.Id.ToString());
 
         if (user == null)
             throw new Exception("User does not exist");

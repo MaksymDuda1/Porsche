@@ -10,6 +10,6 @@ public class UpdatePorscheCenterDto
     
     public string Address { get; set; } = null!;
     
-    public IFormFile? Photo { get; set; }
+    public IFormFile? PhotoPath { get; set; }
     
 }

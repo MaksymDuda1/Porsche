@@ -37,7 +37,7 @@ builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<ISearchService, SearchService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IUserService, UserService>();
-
+builder.Services.AddScoped<IMailService, MailService>();
 builder.Services.AddScoped(typeof(Lazy<>), typeof(LazyInstance<>));    
 
 builder.Services.AddIdentity<UserEntity, RoleEntity>(options =>

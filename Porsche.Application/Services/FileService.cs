@@ -26,7 +26,7 @@ public class FileService : IFileService
 
             return new PhotoEntity()
             {
-                FileName = fileName.ToString(),
+                FileName = dbPath,
                 Path = pathToSave
             };
         }

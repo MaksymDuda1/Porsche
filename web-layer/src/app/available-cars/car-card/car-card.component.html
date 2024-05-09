@@ -1,55 +1,60 @@
 <div class="car-container">
-    <div class="image-wrapper">
-        <div class="row d-flex">
-            <div class="main-img">
-                <img *ngIf="car.photos" src="../../../assets/images/carImages/{{car.photos[0]}}" class="img-fluid"
-                    alt="">
+    <div class="row m-0">
+        <div class="col p-0">
+            <div class="img-wrapper">
+                <img *ngIf="car.photos" [src]="sanitizeImg(car.photos[0].fileName)" alt="">
             </div>
-            <div class="main-part">
-                <div class="car-info">
-                    <div class="car-name">
-                        {{car.model}}
+        </div>
+        <div class="col">
+            <div class="car-info">
+                <div class="title d-flex">
+                    <div class="year-of-edition p-2">
+                        {{car.yearOfEdition}}
                     </div>
-                    <div class="desc">
-                        <div class="color">
-                            Red
-                        </div>
-                        <div class="engine">
-                            {{car.engine}}
-                        </div>
-                        <div class="year">
-                            {{car.yearOfEdition}}
-                        </div>
-                        <div class="mileage">
-                            20022
-                        </div>
-                        <div class="center">
-
-                        </div>
+                    <div class="car-name p-2">
+                        <span>Porsche </span> {{car.model}}
                     </div>
+                </div>
 
-                    <div class="price">
-
-                    </div>
-
-                    <div class="buy-btn">
-                        <button class="btn btn-dark">Buy</button>
-                    </div>
+                <div class="price">
+                    {{car.price}}
+                </div>
+                <div class="engine">
+                    {{car.engine}}
+                </div>
+                <div class="fuel-consumption">
+                    {{car.fuelConsumption}}
+                </div>
+                <div class="color">
+                    {{car.color}}
+                </div>
+                <div class="body-type">
+                    {{car.bodyType}}
+                </div>
+                <div class="center">
+                    {{porshceCenter.name}}
+                </div>
+                <div class="btn btn-dark">
+                    <button class="btn btn-dark" [routerLink]="'/car-detail/' + car.id">Detail</button>
                 </div>
             </div>
         </div>
-        <div class="secondary-images d-flex justify-content-around mt-3">
-            <div class="secondary-images">
-                <img *ngIf="car.photos" src="../../../assets/images/carImages/{{car.photos[2].fileName}}"
-                    class="rounded" alt="...">
+    </div>
+
+    <div class="row d-flex m-0 p-0">
+        <div class="col p-0">
+            <div class="secondary-img m-0 p-0">
+                <img *ngIf="car.photos" [src]="sanitizeImg(car.photos[1].fileName)" alt="">
             </div>
-            <div class="secondary-images">
-                <img *ngIf="car.photos" src="../../../assets/images/carImages/{{car.photos[3].fileName}}"
-                    class="rounded" alt="...">
+        </div>
+        <div class="col m-0  p-0">
+            <div class="secondary-img d-flex m-0 p-0">
+                <img *ngIf="car.photos" [src]="sanitizeImg(car.photos[2].fileName)" alt="">
             </div>
-            <div class="secondary-images">
-                <img *ngIf="car.photos" src="../../../assets/images/carImages/{{car.photos[4].fileName}}"
-                    class="rounded" alt="...">
+        </div>
+        <div class="col m-0 p-0">
+            <div class="secondary-img m-0 p-0">
+                <img *ngIf="car.photos" [src]="sanitizeImg(car.photos[3].fileName)" alt="">
             </div>
         </div>
     </div>

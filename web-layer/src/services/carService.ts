@@ -4,6 +4,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { CarModel } from "../models/CarModel";
 import { UpdateCarModel } from "../models/UpdateCarModel";
+import { CreateCarModel } from "../models/createCarModel";
 
 @Injectable({ providedIn: "root" })
 export class CarService {
@@ -21,11 +22,15 @@ export class CarService {
         return this.client.get<CarModel>(this.path + id);
     }
 
-    createCar(carModel: CarModel): Observable<any> {
+    createCar(carModel: FormData): Observable<any> {
         return this.client.post(this.path, carModel);
     }
 
-    updateCar(updateCarModel: UpdateCarModel): Observable<any> {
+    updateCar(updateCarModel: FormData): Observable<any> {
         return this.client.put(this.path, updateCarModel);
+    }
+
+    deleteCar(id: string): Observable<any>{
+        return this.client.delete(this.path + id);
     }
 }
