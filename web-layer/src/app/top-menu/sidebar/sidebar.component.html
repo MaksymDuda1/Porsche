@@ -1,0 +1,27 @@
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="d-flex">
+        <div class="offcanvas-body">
+            <div class="category-container">
+                <div *ngIf="isAdmin" class="category-title">
+                    <button [routerLink]="'/admin'" class="btn" data-bs-dismiss="offcanvas">Admin page <span>&gt;</span></button>
+                </div>
+                <div class="category-title">
+                    <button [routerLink]="'/available-cars'" class="btn" data-bs-dismiss="offcanvas">Models <span>&gt;</span></button>
+                </div>
+                <div class="category-title">
+                    <button [routerLink]="'/available-cars'" class="btn" data-bs-dismiss="offcanvas">Available cars <span>&gt;</span></button>
+                </div>
+                <div *ngIf="isAuthorized" class="category-title">
+                    <button [routerLink]="'/favorite-cars'" class="btn" data-bs-dismiss="offcanvas">Saved cars<span>&gt;</span></button>
+                </div>
+                
+                <div class="category-title">
+                    <button [routerLink]="'/about-us'" class="btn" data-bs-dismiss="offcanvas">About us<span>&gt;</span></button>
+                </div>
+                <div class="category-title">
+                    <button [routerLink]="'/career'" class="btn" data-bs-dismiss="offcanvas">Career<span>&gt;</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

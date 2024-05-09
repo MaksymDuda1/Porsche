@@ -1,0 +1,35 @@
+<div class="container-info">
+    <div class="model">
+        {{car.model}}
+    </div>
+    <div class="center">
+        <div class="row">
+            <div class="col info-item">
+                {{car.identityCode}}
+                <div class="underline"></div>
+            </div>
+            <div class="col info-item">
+                {{car.model}}
+                <div class="underline"></div>
+            </div>
+            <div class="col info-item">
+                {{getBodyType(car.bodyType)}}
+                <div class="underline"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col info-item">
+                {{getColorType(car.color)}}
+                <div class="underline"></div>
+            </div>
+            <div class="col info-item">
+                {{car.engine}}
+                <div class="underline"></div>
+            </div>
+            <div class="col info-item">
+                {{car.yearOfEdition}}
+                <div class="underline"></div>
+            </div>
+        </div>
+    </div>
+</div>

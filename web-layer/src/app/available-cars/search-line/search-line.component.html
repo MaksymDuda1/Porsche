@@ -1,0 +1,9 @@
+<div class="search-container mt-3">
+    <div class="row mx-5 px-5">
+        <div class="input-group d-flex">
+            <span class="input-group-text">Search by model:</span>
+            <input type="text" class="form-control" [(ngModel)]="searchText" (input)="onSearch()"
+                (ngModelChange)="onSearch()">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="row my-5 mx-0">
+  <div class="col-md-6 p-0">
+      <img class="main-img" *ngIf="car.photos" [src]="sanitizeImg(car.photos[0].fileName)" alt="car img">
+  </div>
+  <div class="col-md-6 p-0">
+      <div class="row m-0 p-0">
+          <div class="col-md-6 p-0 m-0">
+              <div class="secondary-img">
+                  <img *ngIf="car.photos" [src]="sanitizeImg(car.photos[1].fileName)" alt="">
+              </div>
+          </div>
+          <div class="col-md-6 p-0 m-0">
+              <div class="secondary-img">
+                  <img *ngIf="car.photos" [src]="sanitizeImg(car.photos[2].fileName)" alt="">
+              </div>
+          </div>
+      </div>
+      <div class="row m-0 p-0">
+          <div class="col-md-6 p-0 m-0">
+              <div class="secondary-img">
+                  <img *ngIf="car.photos" [src]="sanitizeImg(car.photos[3].fileName)" alt="">
+              </div>
+          </div>
+          <div class="col-md-6 p-0 m-0">
+              <div class="secondary-img">
+                  <img *ngIf="car.photos" [src]="sanitizeImg(car.photos[4].fileName)" alt="">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
