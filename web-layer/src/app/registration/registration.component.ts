@@ -29,6 +29,6 @@ export class RegistrationComponent {
       this.localService.put(LocalService.AuthTokenName, data);
       window.location.href = '/';
     },
-      errorResponse => this.errorMessage = errorResponse.error)
+      errorResponse => this.errorMessage = errorResponse)
   }
 }

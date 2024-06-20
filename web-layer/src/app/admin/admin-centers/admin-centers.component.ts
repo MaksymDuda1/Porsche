@@ -31,9 +31,9 @@ export class AdminCentersComponent implements OnInit {
       this.centerService.getAll().subscribe(data => {
         this.centers = data;
       },
-        errorResponse => this.errorMessage = errorResponse.error)
+        errorResponse => this.errorMessage = errorResponse)
     },
-      errorResponse => this.errorMessage = errorResponse.error)
+      errorResponse => this.errorMessage = errorResponse)
   }
 
   ngOnInit(): void {
@@ -42,7 +42,7 @@ export class AdminCentersComponent implements OnInit {
   
     },
       errorResponse => {
-        this.errorMessage = errorResponse.error;
+        this.errorMessage = errorResponse;
       })
   }
 }

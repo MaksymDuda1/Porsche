@@ -25,7 +25,7 @@
         <div class="btn exit-btn">
 
             <button *ngIf="isAuthorized" class="btn btn-dark" (click)="onExit()">Exit</button>
-            <button *ngIf="!isAuthorized && currentRoute === '/registration'" class="btn btn-dark login-btn"
+            <button *ngIf="!isAuthorized" class="btn btn-dark login-btn"
                 [routerLink]="'/login'">Login</button>
             <button *ngIf="!isAuthorized && currentRoute === '/login'" class="btn btn-dark login-btn"
                 [routerLink]="'/registration'">Registration</button>

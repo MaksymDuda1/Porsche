@@ -36,6 +36,6 @@ export class CreateCenterComponent {
     this.porscheCenterService.create(formData).subscribe(() => {
       this.message = "Created";
     },
-      errorResponse => this.message = errorResponse.error)
+      errorResponse => this.message = errorResponse)
   }
 }

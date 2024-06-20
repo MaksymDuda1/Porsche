@@ -21,9 +21,6 @@ import { OrderComponent } from './order/order.component';
 export class CarDetailComponent {
   constructor(private router: ActivatedRoute,
     private carService: CarService,
-    private localService: LocalService,
-    private jwtHelperService: JwtHelperService,
-    private userService: UserService,
     private porscheCenterService: PorscheCenterService
   ) {
     this.router.paramMap.subscribe((params) => {

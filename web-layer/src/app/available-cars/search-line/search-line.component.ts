@@ -31,7 +31,7 @@ export class SearchLineComponent {
     }
     this.searchService.searchByModel(this.searchText).subscribe(data =>
       this.dataService.updateSearchData(data),
-      errorResponse => this.errorMessage = errorResponse.error
+      errorResponse => this.errorMessage = errorResponse
     )
   }
 }

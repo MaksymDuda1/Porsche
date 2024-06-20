@@ -11,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
+  imports: [CommonModule, FormsModule,  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
@@ -34,8 +34,8 @@ export class LoginComponent {
         else
           window.location.href = '/';
     },
-    errorResponse => {
-      this.errorMessage = errorResponse.error;
-    })
+    (errorResponse: any) => {
+      this.errorMessage = errorResponse;
+      })
   }
 }

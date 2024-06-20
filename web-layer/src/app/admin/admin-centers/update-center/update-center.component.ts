@@ -44,6 +44,6 @@ export class UpdateCenterComponent {
     this.porscheCenterService.update(formData).subscribe(() => {
       this.message = "Updated";
     },
-      errorResponse => this.message = errorResponse.error)
+      errorResponse => this.message = errorResponse)
   }
 }

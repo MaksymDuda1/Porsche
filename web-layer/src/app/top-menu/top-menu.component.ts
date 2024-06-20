@@ -18,7 +18,7 @@ export class TopMenuComponent implements OnInit {
   constructor(private localService: LocalService,
     private jwtHelperService: JwtHelperService,
     private router: Router,
-) { }
+  ) { }
 
   isAuthorized: boolean = false;
   isAdmin: boolean = false;
@@ -27,13 +27,11 @@ export class TopMenuComponent implements OnInit {
   ngOnInit(): void {
     let token = this.localService.get(LocalService.AuthTokenName);
 
-    if (token)
-      {
-        console.log(token);
-        this.isAuthorized = true;
-        let decodedData = this.jwtHelperService.decodeToken(token);
-        this.isAdmin = decodedData.role == "Admin";
-      }
+    if (token) {
+      this.isAuthorized = true;
+      let decodedData = this.jwtHelperService.decodeToken(token);
+      this.isAdmin = decodedData.role == "Admin";
+    }
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;

@@ -34,7 +34,7 @@ export class FavoriteCarsComponent implements OnInit{
       this.userId = decodedData.jti;
       this.userService.getById(this.userId).subscribe(data => {
         this.cars = data;
-      },errorResponse => this.errorMessage = errorResponse.error)
+      },errorResponse => this.errorMessage = errorResponse)
     }
     else{
       this.errorMessage = "You need to login";

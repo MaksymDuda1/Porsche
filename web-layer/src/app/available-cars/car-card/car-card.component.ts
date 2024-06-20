@@ -35,6 +35,6 @@ export class CarCardComponent implements OnInit {
     this.porscheCenterService.getById(this.car.porscheCenterId).subscribe(data => {
       this.porshceCenter = data;
     },
-      errorResponse => this.errorMessage = errorResponse.error)
+      errorResponse => this.errorMessage = errorResponse)
   }
 }

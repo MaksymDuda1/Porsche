@@ -36,9 +36,9 @@ export class AdminUsersComponent implements OnInit {
       this.userService.getAll().subscribe(data => {
         this.users = data;
       },
-    errorResponse => this.errorMessage = errorResponse.error)
+    errorResponse => this.errorMessage = errorResponse)
     },
-  errorResponse => this.errorMessage = errorResponse.error)
+  errorResponse => this.errorMessage = errorResponse)
   }
 
   delete(id: string) {
@@ -46,9 +46,9 @@ export class AdminUsersComponent implements OnInit {
       this.userService.getAll().subscribe(data => {
         this.users = data;
       },
-        errroResponse => this.errorMessage = errroResponse.error)
+        errroResponse => this.errorMessage = errroResponse)
     },
-      errorResponse => this.errorMessage = errorResponse.error)
+      errorResponse => this.errorMessage = errorResponse)
   }
 
   ngOnInit(): void {
@@ -61,7 +61,7 @@ export class AdminUsersComponent implements OnInit {
       this.users = data;
     },
       errorResponse => {
-        this.errorMessage = errorResponse.error;
+        this.errorMessage = errorResponse;
       })
   }
 

@@ -4,7 +4,7 @@ import { routes } from './app.routes';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { LocalService } from '../services/localService';
 import { jwtFactory } from './jwt-options';
-import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule, provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { JWT_OPTIONS, JwtModule } from '@auth0/angular-jwt';
 
@@ -14,6 +14,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { AuthService } from '../services/authService';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { adminRoutes } from './admin/admin.router';
+import { errorInterceptor } from '../interceptor/errorHandlingInterceptor';
 
 
 export const appConfig: ApplicationConfig = {
@@ -21,7 +22,9 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideRouter(adminRoutes),
     provideClientHydration(),
-    provideHttpClient(withFetch()),
+    provideHttpClient(
+      withInterceptors([errorInterceptor]),
+    ),
     importProvidersFrom([
       FormsModule,
       RouterModule,

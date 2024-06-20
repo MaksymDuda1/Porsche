@@ -32,9 +32,9 @@ export class AdminCarsComponent implements OnInit {
         this.cars = data; 
         this.errorMessage = "Deleted"
       },
-        errorResponse => this.errorMessage = errorResponse.error)
+        errorResponse => this.errorMessage = errorResponse)
     },
-      errorResponse => this.errorMessage = errorResponse.error)
+      errorResponse => this.errorMessage = errorResponse)
   }
 
   getBodyType(value: number): string{
@@ -56,7 +56,7 @@ export class AdminCarsComponent implements OnInit {
         this.cars = data;
       },
       errorResponse => {
-        this.errorMessage = errorResponse.error;
+        this.errorMessage = errorResponse;
       }
     );
   
@@ -65,7 +65,7 @@ export class AdminCarsComponent implements OnInit {
         this.porscheCenters = data;
       },
       errorResponse => {
-        this.errorMessage = errorResponse.error;
+        this.errorMessage = errorResponse;
       }
     );
   }

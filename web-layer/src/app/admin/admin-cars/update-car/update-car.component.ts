@@ -92,7 +92,7 @@ export class UpdateCarComponent {
       () => {
         this.message = "Car created successfully";
       },
-      errorResponse => this.message = errorResponse.error
+      errorResponse => this.message = errorResponse
     );
   }
 
@@ -102,7 +102,7 @@ export class UpdateCarComponent {
         this.porscheCenterModels = data;
         this.seedYears();
       },
-      errorResponse => this.message = errorResponse.error
+      errorResponse => this.message = errorResponse
     );
   }
 

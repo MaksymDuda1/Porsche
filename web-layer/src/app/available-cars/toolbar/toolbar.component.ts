@@ -106,7 +106,7 @@ export class ToolbarComponent implements OnInit{
         this.searchByConditionalsModel = new SearchByConditionalsModel();
       },
       errorResponse => {
-        this.errorMessage = errorResponse.error;
+        this.errorMessage = errorResponse;
       }
     );
   }
@@ -116,7 +116,7 @@ export class ToolbarComponent implements OnInit{
     this.porshceCenterService.getAll().subscribe(data => {
       this.porshceCenters = data;
     }
-  ,errorResponse => this.errorMessage = errorResponse.error)
+  ,errorResponse => this.errorMessage = errorResponse)
     this.seedYears();
   }
   

@@ -69,7 +69,7 @@ export class CreateCarComponent implements OnInit {
       () => {
         this.message = "Car created successfully";
       },
-      errorResponse => this.message = errorResponse.error
+      errorResponse => this.message = errorResponse
     );
   }
 
@@ -79,7 +79,7 @@ export class CreateCarComponent implements OnInit {
         this.porscheCenterModels = data;
         this.seedYears();
       },
-      errorResponse => this.message = errorResponse.error
+      errorResponse => this.message = errorResponse
     );
   }
 
