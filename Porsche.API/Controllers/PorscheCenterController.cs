@@ -11,71 +11,33 @@ public class PorscheCenterController(IPorscheCenterService porscheCenterService)
     [HttpGet]
     public async Task<ActionResult> GetAllCenters()
     {
-        try
-        {
-            return Ok(await porscheCenterService.GetAllCenters());
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
+        return Ok(await porscheCenterService.GetAllCenters());
     }
 
     [HttpGet("{id:guid}")]
     public async Task<ActionResult<PorscheCenterDto>> GetCenterById(Guid id)
     {
-        try
-        {
-            return Ok(await porscheCenterService.GetCenterById(id));
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
+        return Ok(await porscheCenterService.GetCenterById(id));
     }
 
     [HttpPost]
     public async Task<IActionResult> CreatePorscheCenter(CreatePorscheCenterDto request)
     {
-        try
-        {
-            await porscheCenterService.CreateCenter(request);
-
-            return Ok();
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
+        await porscheCenterService.CreateCenter(request);
+        return Ok();
     }
 
     [HttpPut]
     public async Task<IActionResult> UpdatePorscheCenter(UpdatePorscheCenterDto request)
     {
-        try
-        {
-            await porscheCenterService.UpdateCenter(request);
-
-            return Ok();
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
+        await porscheCenterService.UpdateCenter(request);
+        return Ok();
     }
 
     [HttpDelete("{id:guid}")]
     public async Task<IActionResult> DeletePorscheCenter(Guid id)
     {
-        try
-        {
-            await porscheCenterService.DeleteCenter(id);
-
-            return Ok();
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
+        await porscheCenterService.DeleteCenter(id);
+        return Ok();
     }
 }

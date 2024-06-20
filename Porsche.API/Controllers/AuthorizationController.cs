@@ -11,27 +11,13 @@ public class AuthorizationController(IAuthorizationService authorizationService)
     [HttpPost("login")]
     public async Task<ActionResult<string>> Login(LoginDto request)
     {
-        try
-        {
-            return Ok(await authorizationService.LoginUser(request));
-        }
-        catch (Exception e)
-        {
-            return Unauthorized(e.Message);
-        }
+        return Ok(await authorizationService.LoginUser(request));
     }
 
     [HttpPost("registration")]
     public async Task<ActionResult<string>> Registration(RegistrationDto request)
     {
-        try
-        {
-            return Ok(await authorizationService.RegisterUser(request));
-        }
-        catch (Exception e)
-        {
-            return Unauthorized(e.Message);
-        }
+        return Ok(await authorizationService.RegisterUser(request));
     }
 
 }

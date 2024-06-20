@@ -12,6 +12,7 @@ using Porsche.Domain.Abstractions;
 using Porsche.Domain.Entities;
 using Porsche.Infrastructure;
 using Porsche.Infrastructure.Repositories;
+using Porsche.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -90,6 +91,7 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(

@@ -24,73 +24,34 @@ public class CarController(ICarService carService) : ControllerBase
     [HttpGet("{id:guid}")]
     public async Task<IActionResult> GetCarById(Guid id)
     {
-        try
-        {
-            return Ok(await carService.GetCarById(id));
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
+        return Ok(await carService.GetCarById(id));
     }
 
     [HttpPost]
     public async Task<IActionResult> CreateCar([FromForm] CreateCarDto request)
     {
-        try
-        {
-            await carService.CreateCar(request);
-                
-            return Ok();
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
+        await carService.CreateCar(request);
+        return Ok();
     }
 
     [HttpPut]
     public async Task<IActionResult> UpdateCar(UpdateCarDto request)
     {
-        try
-        {
-            await carService.UpdateCar(request);
-
-            return Ok();
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
+        await carService.UpdateCar(request);
+        return Ok();
     }
 
     [HttpPut("update-photo")]
     public async Task<IActionResult> UpdateCarPhoto(UpdatePhotoDto request)
     {
-        try
-        {
-            await carService.UpdatePhoto(request);
-
-            return Ok();
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
+        await carService.UpdatePhoto(request);
+        return Ok();
     }
 
     [HttpDelete("{id:guid}")]
     public async Task<IActionResult> DeleteCar(Guid id)
     {
-        try
-        {
-            await carService.DeleteCar(id);
-
-            return Ok();
-        }
-        catch (Exception e)
-        {
-            return BadRequest(e.Message);
-        }
+        await carService.DeleteCar(id);
+        return Ok();
     }
 }
